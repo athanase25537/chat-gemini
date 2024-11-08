@@ -2,6 +2,8 @@
     --main: #18534F;
     --second: #424340;
     --third: #ECF8F6;
+    --fourth: #B0B9A8;
+    --fifth: #B0B9A8;
 }
 
 @font-face {
@@ -54,7 +56,7 @@ body {
     height: 60vh;
     margin: 10px 0;
     padding: 0 10px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .sms {
@@ -73,6 +75,29 @@ body {
 
 .sms.sms-received {
     background-color: var(--second);
+}
+
+.sms.sms-received.load {
+    width: 20%;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.sms.sms-received.load span {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background-color: var(--fourth);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: background .3s ease-in-out;
+}
+
+.sms.sms-received.load span.active {
+    background-color: var(--third);
 }
 
 .chat-form {
